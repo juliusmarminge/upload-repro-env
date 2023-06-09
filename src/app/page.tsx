@@ -1,11 +1,12 @@
 "use client";
 
 import { UploadButton, UploadDropzone } from "@uploadthing/react";
+import { getUtUrl } from "uploadthing/client";
 
 import type { OurFileRouter } from "~/server/uploadthing";
 
 export default function Home() {
-  console.log({ env: process.env });
+  console.log({ env: process.env, url: getUtUrl() });
   return (
     <main className="flex min-h-screen flex-col items-center justify-center  gap-16 p-24">
       <div className="flex flex-col items-center justify-center gap-4">
